@@ -6,7 +6,7 @@
     margin: 0;
 }
 html {
-    font-size: 62.5%;
+    font-size: 80%;
 }
 body {
     font-family: 'Quicksand', sans-serif;
@@ -41,7 +41,7 @@ body {
     width: 25rem;
     height: 25rem;
     border-radius: 100%;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.555);
+    box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.555),-5px 0px 5px rgba(0, 0, 0, 0.555);
 }
 
 .Song-Title {
@@ -147,7 +147,7 @@ body {
     width: 50% !important;
     margin-top: 2rem;
 }
-.css-3uoig3-Slider {
+.css-wpz5lw-Slider > div:nth-child(2) > div {
     position: relative;
     display: block;
     width: 15px !important;
@@ -156,7 +156,7 @@ body {
     border-radius: 50% !important;
     margin-top: 0 !important;
 }
-.css-6nna9v-Slider {
+.css-wpz5lw-Slider > div:nth-child(1) {
     background-color: #fff !important;
 }
 
