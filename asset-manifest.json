@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/playAudio/static/css/main.ff1d3820.chunk.css",
+    "main.js": "/playAudio/static/js/main.67d6cd87.chunk.js",
+    "main.js.map": "/playAudio/static/js/main.67d6cd87.chunk.js.map",
+    "runtime-main.js": "/playAudio/static/js/runtime-main.b63a456b.js",
+    "runtime-main.js.map": "/playAudio/static/js/runtime-main.b63a456b.js.map",
+    "static/js/2.0fb10397.chunk.js": "/playAudio/static/js/2.0fb10397.chunk.js",
+    "static/js/2.0fb10397.chunk.js.map": "/playAudio/static/js/2.0fb10397.chunk.js.map",
+    "index.html": "/playAudio/index.html",
+    "precache-manifest.bf70f5d8aa20572926da1318636000df.js": "/playAudio/precache-manifest.bf70f5d8aa20572926da1318636000df.js",
+    "service-worker.js": "/playAudio/service-worker.js",
+    "static/css/main.ff1d3820.chunk.css.map": "/playAudio/static/css/main.ff1d3820.chunk.css.map",
+    "static/js/2.0fb10397.chunk.js.LICENSE.txt": "/playAudio/static/js/2.0fb10397.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/playAudio/static/media/background.4e165c79.jpg",
+    "static/media/chonhaumotkyniem.mp3": "/playAudio/static/media/chonhaumotkyniem.e2b64486.mp3",
+    "static/media/emchicannoico.mp3": "/playAudio/static/media/emchicannoico.936b3be0.mp3",
+    "static/media/noitachoem.mp3": "/playAudio/static/media/noitachoem.306ed0e1.mp3",
+    "static/media/tinhsauthienthu.mp3": "/playAudio/static/media/tinhsauthienthu.cae878e3.mp3",
+    "static/media/voivang.mp3": "/playAudio/static/media/voivang.36178780.mp3"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b63a456b.js",
+    "static/js/2.0fb10397.chunk.js",
+    "static/css/main.ff1d3820.chunk.css",
+    "static/js/main.67d6cd87.chunk.js"
+  ]
+}
