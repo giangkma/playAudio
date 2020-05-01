@@ -1,0 +1,48 @@
+.form-upload-audio {
+    position: absolute;
+    top: -40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(89, 25, 79, 0.94);
+    width: 30rem;
+    padding: 2rem 2rem 4rem 2rem;
+    color: #ffffff;
+    font-size: 1.8rem;
+    text-align: center;
+    border-radius: 2rem;
+    transition: 0.5s all ease-out;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.438);
+}
+.form-upload-audio > .input-file {
+    padding: 2rem 0 .7rem 0;
+}
+.form-upload-audio > button{
+    margin-top: 1rem;
+    float: right;
+}
+.form-upload-audio.open {
+    top: 40%;
+    transition: 0.5s all ease-out;
+}
+.form-upload-audio .MuiFormControl-root {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.form-upload-audio .MuiFormControl-root > label {
+    color: #ffffff;
+    font-size: 1.3rem;
+}
+.form-upload-audio .MuiFormControl-root input {
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+.form-upload-audio .icon-close-form {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    cursor: pointer;
+}
+.form-upload-audio .icon-close-form svg {
+    font-size: 3rem;
+    color: #ffffff;
+}

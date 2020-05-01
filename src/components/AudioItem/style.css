@@ -1,0 +1,26 @@
+.audio-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.4s all ease;
+    cursor: pointer;
+    width: 100%;
+    padding: 1rem;
+}
+.audio-item:hover,
+.audio-item.playing {
+    background: #a93ab1f3;
+    transition: 0.4s all ease;
+}
+.audio-item > img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.audio-item > p {
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
