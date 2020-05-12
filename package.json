@@ -9,6 +9,7 @@
         "@testing-library/jest-dom": "^4.2.4",
         "@testing-library/react": "^9.5.0",
         "@testing-library/user-event": "^7.2.1",
+        "firebase": "^7.14.3",
         "gh-pages": "^2.2.0",
         "material-ui": "^0.20.2",
         "mp3-duration": "^1.1.0",

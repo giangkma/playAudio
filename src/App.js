@@ -1,26 +1,61 @@
-import PauseCircleOutlineIcon from '@material-ui/icons/PauseCircleOutline';
-import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
-import SkipNextIcon from '@material-ui/icons/SkipNext';
-import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
-import React, { useRef, useState } from 'react';
-import TimeSlider from 'react-input-slider';
-import './App.css';
-import audios from './audios';
-import MenuOpenIcon from '@material-ui/icons/MenuOpen';
-import HighlightOffIcon from '@material-ui/icons/HighlightOff';
-import AudioItem from './components/AudioItem';
-import { Button } from '@material-ui/core';
-import FormUploadAudio from './components/FormUploadAudio';
+import PauseCircleOutlineIcon from "@material-ui/icons/PauseCircleOutline";
+import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
+import SkipNextIcon from "@material-ui/icons/SkipNext";
+import SkipPreviousIcon from "@material-ui/icons/SkipPrevious";
+import React, { useRef, useState, useEffect } from "react";
+import TimeSlider from "react-input-slider";
+import "./App.css";
+import MenuOpenIcon from "@material-ui/icons/MenuOpen";
+import HighlightOffIcon from "@material-ui/icons/HighlightOff";
+import AudioItem from "./components/AudioItem";
+import { Button } from "@material-ui/core";
+import FormUploadAudio from "./components/FormUploadAudio";
+
+import * as firebase from "firebase";
+import "./firebaseConnect";
+const dataFirebase = firebase.database().ref("audios");
 
 const App = () => {
     const audioRef = useRef();
     const [audioIndex, setAudioIndex] = useState(0);
+    const [audios, setAudios] = useState([
+        {
+            src: "",
+            image:
+                "https://nicolasbrugneaux.me/web-player-react/dist/img/default.png",
+            title: "Vui lòng chờ !",
+            artist: "Đang tải dữ liệu",
+        },
+    ]);
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
     const [isPlay, setPlay] = useState(false);
     const [isOpenSideBar, setOpenSideBar] = useState(true);
     const [isOpenFormUpload, setOpenFormUpload] = useState(false);
 
+    useEffect(() => {
+        //Get data audios from Firebase
+        async function getAudiosFromFirebase() {
+            try {
+                dataFirebase.once("value").then((res) => {
+                    const audios = [];
+                    const listKeys = Object.keys(res.val() || {});
+                    const listValues = Object.values(res.val() || {});
+                    listKeys.map((item, index) => {
+                        listValues[index].id = item;
+                        audios.push(listValues[index]);
+                        return audios;
+                    });
+                    if (audios) {
+                        setAudios(audios);
+                    }
+                });
+            } catch (err) {
+                alert(err);
+            }
+        }
+        getAudiosFromFirebase();
+    });
     const handleLoadedData = () => {
         setDuration(audioRef.current.duration);
         if (isPlay) audioRef.current.play();
@@ -44,6 +79,9 @@ const App = () => {
             audioRef.current.play();
         }
     };
+    const deleteAudio = (id) => {
+        dataFirebase.child(id).remove();
+    };
     const lengthAudios = audios.length;
     const renderAudioItem = () => {
         let xhtml = null;
@@ -57,6 +95,7 @@ const App = () => {
                         selectAudio(index);
                     }}
                     audioIndex={audioIndex}
+                    deleteAudio={deleteAudio}
                 />
             );
         });
@@ -87,14 +126,10 @@ const App = () => {
         let dTimeMinute = Math.floor(duration / 60);
         let dTimeSecond = Math.floor(duration % 60);
         let cTime = `${cTimeMinute} : ${
-            cTimeSecond < 10
-                ? `0${cTimeSecond}`
-                : `${cTimeSecond}`
+            cTimeSecond < 10 ? `0${cTimeSecond}` : `${cTimeSecond}`
         }`;
         let dTime = `${dTimeMinute} : ${
-            dTimeSecond < 10
-                ? `0${dTimeSecond}`
-                : `${dTimeSecond}`
+            dTimeSecond < 10 ? `0${dTimeSecond}` : `${dTimeSecond}`
         }`;
         xhtml = `${cTime} / ${dTime}`;
         return xhtml;
@@ -107,7 +142,7 @@ const App = () => {
                 {/* eslint-disable-next-line jsx-a11y/img-redundant-alt */}
                 <img
                     className={`Song-Thumbnail ${
-                        isPlay ? 'playAudio' : 'pauseAudio'
+                        isPlay ? "playAudio" : "pauseAudio"
                     }`}
                     src={audios[audioIndex].image}
                     alt="image"
@@ -142,7 +177,7 @@ const App = () => {
                         <SkipNextIcon />
                     </div>
                 </div>
-                <p className="render-time" >{renderTime()}</p>
+                <p className="render-time">{renderTime()}</p>
                 <TimeSlider
                     axis="x"
                     xmax={duration}
@@ -150,18 +185,18 @@ const App = () => {
                     onChange={handleTimeSliderChange}
                     styles={{
                         track: {
-                            backgroundColor: '#e3e3e3',
-                            height: '2px',
+                            backgroundColor: "#e3e3e3",
+                            height: "2px",
                         },
                         active: {
-                            backgroundColor: '#333',
-                            height: '2px',
+                            backgroundColor: "#333",
+                            height: "2px",
                         },
                         thumb: {
-                            marginTop: '-3px',
-                            width: '8px',
-                            height: '8px',
-                            backgroundColor: '#333',
+                            marginTop: "-3px",
+                            width: "8px",
+                            height: "8px",
+                            backgroundColor: "#333",
                             borderRadius: 0,
                         },
                     }}
@@ -187,9 +222,9 @@ const App = () => {
                     />
                 </label>
             ) : (
-                ''
+                ""
             )}
-            <div className={`slide-bar ${isOpenSideBar ? 'open' : 'close'} `}>
+            <div className={`slide-bar ${isOpenSideBar ? "open" : "close"} `}>
                 <label className="close-sidebar">
                     <HighlightOffIcon
                         onClick={() => {

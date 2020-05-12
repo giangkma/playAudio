@@ -24,3 +24,11 @@
     padding: 1rem;
     font-size: 1.2rem;
 }
+
+.delete-audio > svg{
+    font-size:2rem;
+    opacity: 0;
+}
+.audio-item:hover > span.delete-audio > svg {
+    opacity: 1;
+}

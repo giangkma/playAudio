@@ -15,6 +15,19 @@
 }
 .form-upload-audio > .input-file {
     padding: 2rem 0 .7rem 0;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.form-upload-audio > .input-file > span{
+    font-size:1.2rem;
+}
+.form-upload-audio > .input-file > span > svg{
+    font-size: 2rem;
+    cursor: pointer;
+}
+.form-upload-audio > .input-file > span > svg:hover{
+    color: rgb(160, 196, 168);
 }
 .form-upload-audio > button{
     margin-top: 1rem;
@@ -45,4 +58,9 @@
 .form-upload-audio .icon-close-form svg {
     font-size: 3rem;
     color: #ffffff;
+}
+
+progress{
+    width: 100%;
+    height: 10px;
 }
