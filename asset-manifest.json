@@ -1,41 +1,23 @@
 {
   "files": {
-    "main.css": "/playAudio/static/css/main.521a8c18.chunk.css",
-    "main.js": "/playAudio/static/js/main.7ae13e75.chunk.js",
-    "main.js.map": "/playAudio/static/js/main.7ae13e75.chunk.js.map",
+    "main.css": "/playAudio/static/css/main.a5eff4ab.chunk.css",
+    "main.js": "/playAudio/static/js/main.15abffc5.chunk.js",
+    "main.js.map": "/playAudio/static/js/main.15abffc5.chunk.js.map",
     "runtime-main.js": "/playAudio/static/js/runtime-main.b63a456b.js",
     "runtime-main.js.map": "/playAudio/static/js/runtime-main.b63a456b.js.map",
-    "static/js/2.da0fe5bf.chunk.js": "/playAudio/static/js/2.da0fe5bf.chunk.js",
-    "static/js/2.da0fe5bf.chunk.js.map": "/playAudio/static/js/2.da0fe5bf.chunk.js.map",
+    "static/js/2.60f2e6bd.chunk.js": "/playAudio/static/js/2.60f2e6bd.chunk.js",
+    "static/js/2.60f2e6bd.chunk.js.map": "/playAudio/static/js/2.60f2e6bd.chunk.js.map",
     "index.html": "/playAudio/index.html",
-    "precache-manifest.c2c67a7aec468a613c009e00a65f1278.js": "/playAudio/precache-manifest.c2c67a7aec468a613c009e00a65f1278.js",
+    "precache-manifest.44677e7f2ca1689dc9795f1a942665de.js": "/playAudio/precache-manifest.44677e7f2ca1689dc9795f1a942665de.js",
     "service-worker.js": "/playAudio/service-worker.js",
-    "static/css/main.521a8c18.chunk.css.map": "/playAudio/static/css/main.521a8c18.chunk.css.map",
-    "static/js/2.da0fe5bf.chunk.js.LICENSE.txt": "/playAudio/static/js/2.da0fe5bf.chunk.js.LICENSE.txt",
-    "static/media/aichoai.mp3": "/playAudio/static/media/aichoai.f34a133a.mp3",
-    "static/media/anhnangcuaanh.mp3": "/playAudio/static/media/anhnangcuaanh.2c1c42a7.mp3",
-    "static/media/anhthuongemnhatma.mp3": "/playAudio/static/media/anhthuongemnhatma.c9efc28c.mp3",
-    "static/media/App.css": "/playAudio/static/media/background.4e165c79.jpg",
-    "static/media/chonhaumotkyniem.mp3": "/playAudio/static/media/chonhaumotkyniem.e2b64486.mp3",
-    "static/media/danhchoem.mp3": "/playAudio/static/media/danhchoem.146bf22e.mp3",
-    "static/media/emchicannoico.mp3": "/playAudio/static/media/emchicannoico.936b3be0.mp3",
-    "static/media/homnaytoibuon.mp3": "/playAudio/static/media/homnaytoibuon.29151cc5.mp3",
-    "static/media/khongcanphaihuadauem.mp3": "/playAudio/static/media/khongcanphaihuadauem.0028e0ac.mp3",
-    "static/media/nguoiay.mp3": "/playAudio/static/media/nguoiay.fac00e51.mp3",
-    "static/media/noitachoem.mp3": "/playAudio/static/media/noitachoem.306ed0e1.mp3",
-    "static/media/tamsutuoi30.mp3": "/playAudio/static/media/tamsutuoi30.05adce49.mp3",
-    "static/media/tinhdonphuong.mp3": "/playAudio/static/media/tinhdonphuong.fed6a9d7.mp3",
-    "static/media/tinhsauthienthu.mp3": "/playAudio/static/media/tinhsauthienthu.cae878e3.mp3",
-    "static/media/uocgi.mp3": "/playAudio/static/media/uocgi.e0ad1e21.mp3",
-    "static/media/voivang.mp3": "/playAudio/static/media/voivang.36178780.mp3",
-    "static/media/votuyetvoinhat.mp3": "/playAudio/static/media/votuyetvoinhat.22a4b2e2.mp3",
-    "static/media/yeuemratnhieu.mp3": "/playAudio/static/media/yeuemratnhieu.4025eb36.mp3",
-    "static/media/yeulaitudau.mp3": "/playAudio/static/media/yeulaitudau.8f9274cb.mp3"
+    "static/css/main.a5eff4ab.chunk.css.map": "/playAudio/static/css/main.a5eff4ab.chunk.css.map",
+    "static/js/2.60f2e6bd.chunk.js.LICENSE.txt": "/playAudio/static/js/2.60f2e6bd.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/playAudio/static/media/background.4e165c79.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.b63a456b.js",
-    "static/js/2.da0fe5bf.chunk.js",
-    "static/css/main.521a8c18.chunk.css",
-    "static/js/main.7ae13e75.chunk.js"
+    "static/js/2.60f2e6bd.chunk.js",
+    "static/css/main.a5eff4ab.chunk.css",
+    "static/js/main.15abffc5.chunk.js"
   ]
 }
